@@ -13,7 +13,7 @@ public class SfgDiApplication {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 		
 		MyController myController = (MyController) ctx.getBean("myController");
-		
+		//myControler - this is a convention, the bean name is the class name beginning with a lower case
 		String greeting = myController.saySalut();
 		
 		System.out.println(greeting);
