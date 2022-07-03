@@ -3,21 +3,21 @@ package guru.springframework.sfgdi.controllers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import guru.springframework.sfgdi.services.ConstructorInjectedGreetingSerice;
+import guru.springframework.sfgdi.services.ConstructorInjectedGreetingService;
 
 class ConstructorInjectedControllerTest {
-	
-	ConstructorInjectedController controller;
 
-	@BeforeEach
-	void setUp() {
-		controller = new ConstructorInjectedController(new ConstructorInjectedGreetingSerice());
-	}
+    ConstructorInjectedController controller;
 
-	@Test
-	void test() {
-		
-		System.out.println(controller.getGreeting());
-	}
+    @BeforeEach
+    void setUp() {
+        controller = new ConstructorInjectedController(new ConstructorInjectedGreetingService());
+    }
+
+    @Test
+    void test() {
+
+        System.out.println(controller.getGreeting());
+    }
 
 }
